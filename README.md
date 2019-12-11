@@ -8,9 +8,8 @@
 ###  Illustration of the DC synthesis for the elevator subsystem
 ![Image of the tool workflow ](https://github.com/kiiboyane/MDE/blob/master/images/ToDC.PNG)
 
-### PlantUMl 
+### PlantUML
 the modelisation of the Local Controller (LC) was made with PlantUML  ; saved in the file uml.that 
-
 ```
 @startuml
 (*) --> "0"
@@ -23,8 +22,26 @@ the modelisation of the Local Controller (LC) was made with PlantUML  ; saved in
 "6" --> [<&arrow-top> dn]  "7"
 "7"  --> [<&arrow-bottom> Go_dn] "0"
 @enduml
+```
+### from LCNode to ALCNode to DCNode
+
+All the nodes connected with controllable events are combined to form one ALCNode.A DCNode is contructed using and ALNode plus the conditions 
+![Image of the tool workflow ](https://github.com/kiiboyane/MDE/blob/master/images/Nodes.PNG)
+
+### Conditions 
+the conditions are saved in the file file.const and written as follow :
 
 ```
+If Condition1 then Ord(Go_up)
+If Condition2 then Ord(Go_dn)
+```
+
+### Grafcet 
+
+The final DC is transformed to a Grafcet modelised using json , the result is saved in the file file.json  it can be visualized as follow :
+![Image of the tool workflow ](https://github.com/kiiboyane/MDE/blob/master/images/grafcet.PNG)
+use this [link](https://gojs.net/2.0.20/samples/grafcet.html) to visualize it.
+
 
 
 
