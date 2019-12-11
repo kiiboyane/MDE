@@ -1,0 +1,17 @@
+@startuml
+
+
+(*) --> "0"
+"0" --> [<&arrow-top> Go_up] "1"  
+"1" --> [<&arrow-bottom> dn] "2"
+"2" --> [<&arrow-top> up] "3"
+"3" -->  [<&arrow-bottom> Go_up] "4"
+"4" --> [<&arrow-top> Go_dn] "5"
+"5" --> [<&arrow-bottom> up] "6"
+"6" --> [<&arrow-top> dn]  "7"
+"7"  --> [<&arrow-bottom> Go_dn] "0"
+
+
+
+
+@enduml
