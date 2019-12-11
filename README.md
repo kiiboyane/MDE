@@ -4,4 +4,4 @@
 
 ### The tool workflow 
 
-![Image of the tool workflow ](workflow.png)
+![Image of the tool workflow ](/workflow.png)
